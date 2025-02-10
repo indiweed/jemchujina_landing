@@ -34,20 +34,8 @@
     updateSlides();
 });
     </script>
-    <script>
-        function initMap() {
-            var location = {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE};
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: location
-            });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8822bfca-3640-4f11-9bda-78025dbd3ac2&lang=ru_RU" type="text/javascript">
     </script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script>
         function init() {
             var map = new ymaps.Map("footer_contacts_map", {
@@ -87,7 +75,7 @@
                     </header>
                     <div class="club_info">
                         <div class="club_desc">
-                            <div class="club_desc_up">Бережный подход</div>
+                            <div class="club_desc_up">Бережный <span class="space_text">подход</span></div>
                             <div class="club_desc_down">Растим чемпионов <span class="space_text">с любовью и заботой</span></div>
                         </div>
                         <form action="https://wa.me/79273109454" target="_blank">
@@ -125,14 +113,19 @@
                                     <img src="./images/infoicon4.svg" alt="">
                                     <div class="info_card_text" id="info_4">Просторный зал:<span class="space_text">4 площадки</span> <span id="info_space_text">с ковровым покрытием</span></div>
                                 </li>
+                                <form action="https://wa.me/79273109454" target="_blank">
+                                    <button class="trial_session btn_mobile" id="trial_session_video">
+                                        Записаться на пробное занятие
+                                    </button>
+                                </form>
                             </ul>
                         </div>
                         <div class="video_container">
-                            <video class="video" width="563px" height="487px" controls>
+                            <video class="video" controls>
                                 <source src="./images/videoo.mp4" type="video/mp4">
                             </video>
                             <form action="https://wa.me/79273109454" target="_blank">
-                                <button class="trial_session" id="trial_session_video">
+                                <button class="trial_session btn_desktop" id="trial_session_video">
                                     Записаться на пробное занятие
                                 </button>
                             </form>
@@ -143,6 +136,42 @@
                             <h1 class="slider_menu_title">
                                 Растим чемпионов
                             </h1>
+                            <div class="uk uk-mobile uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true, autoplay: true, autoplay-interval: 3000, finite: true">
+                                <div class="uk-slider-items uk-grid uk-grid-small">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-panel">
+                                            <img src="./images/carousel1.svg" loading="eager" alt="Слайд 1">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-panel">
+                                            <img src="./images/carousel2.svg" loading="eager" alt="Слайд 2">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-panel">
+                                            <img src="./images/carousel3.svg" loading="eager" alt="Слайд 3">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-panel">
+                                            <img src="./images/carousel4.svg" loading="eager" alt="Слайд 4">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-panel">
+                                            <img src="./images/carousel5.svg" loading="eager" alt="Слайд 4">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-panel">
+                                            <img src="./images/carousel6.svg" loading="eager" alt="Слайд 4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slider-item="previous"><img src="./images/prevbtn_mobile.svg" alt="Назад"></a>
+                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slider-item="next"><img src="./images/arrowbtn_mobile.svg" alt="Вперед"></a>
+                            </div>
                             <div class="slider_menu_info_list">
                                 <ul class="slider_menu_info_ul">
                                     <li class="slider_menu_info_item">
@@ -155,12 +184,12 @@
                                     </li>
                                     <li class="slider_menu_info_item">
                                         <h2>Призовые места</h2>
-                                        <p>на соревнованиях всероссийского и регионального уровня</p>
+                                        <p>на соревнованиях всероссийского <span class="space_text">и регионального уровня</span></p>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="uk uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true, autoplay: true, autoplay-interval: 3000, finite: true">
+                        <div class="uk uk-desktop uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true, autoplay: true, autoplay-interval: 3000, finite: true">
                             <div class="uk-slider-items uk-grid uk-flex-center">
                                 <div class="uk-width-1-2">
                                     <div class="uk-panel">
@@ -252,13 +281,13 @@
                     </div>
                     <div class="feedback">
                         <div class="feedback_container">
-                            <h1 class="feedback_title">
-                                Отзывы родителей
-                            </h1>
+                            <p class="feedback_title">
+                                Отзывы <span class="space_text space_mobile"></span> родителей
+                            </з>
                             <div class="feedback_screenshots">
-                                <img src="./images/feedback_1.svg" alt="">
-                                <img src="./images/feedback_2.svg" alt="">
-                                <img src="./images/feedback_3.svg" alt="">
+                                <img src="./images/feedback_1.svg" alt="" id="feedback_1">
+                                <img src="./images/feedback_2.svg" alt="" id="feedback_2">
+                                <img src="./images/feedback_3.svg" alt="" id="feedback_3">
                             </div>
                         </div>
                     </div>
@@ -268,19 +297,21 @@
         <footer class="footer" id="footer_contacts">
             <div class="footer_container">
                 <div class="footer_contacts_container">
-                    <img src="./images/logo_logo.svg" alt="Логотип">
-                    <h1 class="footer_contacts_title">Контакты</h1>
-                    <a href="tel: +7 927 310 94 54" class="footer_number">+7 927 310-94-54</a>
-                    <div class="footer_contacts_address">
-                        <h2>Приходите в гости:</h2>
-                        <p>г. Уфа, ул Менделеева, 136/5 к11</p>
-                    </div>
-                    <div class="footer_contacts_social">
-                        <a id="vk" href="https://vk.com/sk_zhemchuzhina_ufa"><img src="./images/simple-icons_vk.svg" alt="Группа ВК"></a>
-                        <a id="whatsapp" href="https://wa.me/79273109454"><img src="./images/simple-icons_whatsapp.svg" alt=""></a>
+                    <div class="footer_contacts_wrapper">
+                        <img src="./images/logo_logo.svg" alt="Логотип">
+                        <h1 class="footer_contacts_title">Контакты</h1>
+                        <a href="tel: +7 927 310 94 54" class="footer_number">+7 927 310-94-54</a>
+                        <div class="footer_contacts_address">
+                            <h2>Приходите в гости:</h2>
+                            <p>г. Уфа, ул Менделеева, <span class="space_text space_mobile"></span> 136/5 к11</p>
+                        </div>
+                        <div class="footer_contacts_social">
+                            <a id="vk" href="https://vk.com/sk_zhemchuzhina_ufa"><img src="./images/simple-icons_vk.svg" alt="Группа ВК"></a>
+                            <a id="whatsapp" href="https://wa.me/79273109454"><img src="./images/simple-icons_whatsapp.svg" alt=""></a>
+                        </div>
                     </div>
                 </div>
-                <div id="footer_contacts_map"></div>
+                <div id="footer_contacts_map" style="width: 50% ; height: 100%;"></div>
             </div>
         </footer>
     </div>

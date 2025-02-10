@@ -101,6 +101,10 @@ body {
     margin: 0 auto;
 }
 
+form {
+    max-width: max-content;
+}
+
 .intro {
     background: url(./images/intro_backgrnd.svg) no-repeat;
     background-size: cover;
@@ -118,6 +122,12 @@ body {
     padding: 0 100px;
     margin: 0 auto;
     max-width: 1500px;
+}
+
+@media(max-width: 980px) {
+    .intro_wrapper {
+        padding: 0 20px;
+    }
 }
 
 .header {
@@ -139,7 +149,7 @@ body {
 
 .header_club_name {
     text-align: left;
-    width: 150px;
+    max-width: 150px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 10px;
@@ -166,6 +176,7 @@ body {
     margin-top: 28px;
 }
 
+
 .header_navbar_wrap a {
     color: rgba(255, 255, 255, 1);
 }
@@ -189,9 +200,15 @@ body {
     text-decoration: none;
 }
 
+@media (max-width: 870px) {
+    .header_navbar_wrap, .header_phone {
+        display: none;
+    }
+}
+
 .club_info {
     margin-top: 94px;
-    width: 470px;
+    max-width: 470px;
 }
 
 /**/
@@ -238,13 +255,21 @@ body {
     text-align: center;
     height: 67px;
     border-radius: 16px;
+    padding: 16px;
 }
 
 #trial_session_intro {
     margin-top: 36px;
-    width: 414px;
+    max-width: 100%;
     color: rgba(255, 255, 255, 1);
     background: linear-gradient(91.5deg, #5DA1F8 0%, #3164B9 100%);
+}
+
+@media (max-width: 870px) {
+    .club_desc_up {
+        font-size: 48px;
+        line-height: 48px;
+    }
 }
 
 .main {
@@ -277,6 +302,7 @@ body {
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
+    height: max-content;
 }
 
 .info_card {
@@ -284,6 +310,9 @@ body {
     align-items: flex-start;
     height: max-content;
     gap: 16px;
+}
+
+.info_card:not(:first-child) {
     margin-top: 32px;
 }
 
@@ -291,6 +320,11 @@ body {
     display: block;
     gap: 48px;
     padding: 0;
+    margin: 0;
+}
+
+.btn_mobile {
+    display: none;
 }
 
 #info_1 {
@@ -310,19 +344,86 @@ body {
 }
 
 .video {
-    width: 563px;
-    height: 320px;
+    max-width: 563px;
+    max-height: 320px;
 }
 
 .video_container {
     display: block;
 }
 
+@media (max-width: 980px) {
+    .about_us_container {
+        padding: 0 10px;
+        gap: 5px;
+    }
+
+    .about_us_info {
+        color: rgba(84, 145, 223, 1);
+        font-size: 16px;
+    }
+}
+
 #trial_session_video {
-    width: 563px;
+    max-width: 563px;
     background: rgba(51, 103, 188, 1);
     color: rgba(255, 255, 255, 1);
     margin-top: 34px;
+}
+
+@media (max-width: 980px) {
+    .about_us_container {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 870px) {
+    .btn_desktop {
+        display: none;
+    }
+
+    .btn_mobile {
+        display: inline;
+    }
+
+    .about_us_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .about_us_title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+        
+        .about_us_info {
+            margin: 0 auto;
+        }
+    
+        #trial_session_video {
+            width: 100%;
+            background: rgba(51, 103, 188, 1);
+            color: rgba(255, 255, 255, 1);
+            margin-top: 34px;
+        }
+
+        .video_container {
+            margin-top: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0; /* Удаляем отступы, чтобы контейнер занимал всю ширину */
+            width: 100%; /* Убедитесь, что контейнер занимает всю ширину */
+        }
+        
+        .video {
+            width: 100%; /* Занимает 100% ширины родительского контейнера */
+            height: auto; /* Высота автоматически подстраивается */
+            max-width: 100%; /* Не превышает ширину экрана */
+        }
 }
 
 .slider_menu {
@@ -336,11 +437,11 @@ body {
     color: rgba(255, 255, 255, 1);
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center; /* Центрируем содержимое */
+    justify-content: center;
     align-items: center;
-    max-width: 1200px; /* Устанавливаем максимальную ширину контейнера */
-    margin: 0 auto; /* Центрируем контейнер */
-    padding-left: 20px; /* Уменьшите или уберите отступы по бокам */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
     padding-right: 20px;
 }
 
@@ -349,12 +450,13 @@ body {
     font-weight: 600;
     font-size: 72px;
     line-height: 90px;
-    width: 563px;
+    max-width: 563px;
     color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
 }
 
 .slider_menu_info_list {
-    width: 389px;
+    max-width: 389px;
 }
 
 .slider_menu_info_ul {
@@ -402,6 +504,29 @@ body {
     margin-bottom: 0;
 }
 
+
+@media (max-width: 870px) {
+
+    .slider_menu {
+        margin-top: 32px;
+    }
+    .slider_menu_title {
+        font-size: 32px;
+        height: auto;
+        line-height: 40px;
+    }
+
+    .slider_menu_info_item h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .slider_menu_info_item p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
 .custom-slider {
     max-width: 1400px;
     margin: 0 auto;
@@ -409,6 +534,10 @@ body {
 
 .uk {
     margin-top: 74px;
+}
+
+.uk-mobile {
+    display: none;
 }
 
 .uk-panel img {
@@ -436,6 +565,7 @@ body {
     opacity: 0.5;
 }
 
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -444,8 +574,64 @@ body {
 
 #trial_session_slider {
     background-color: rgba(255, 255, 255, 1);
-    width: 575px;
+    max-width: 575px;
     color: rgba(93, 161, 248, 1);;
+}
+
+@media (max-width: 860px) {
+
+    .uk-desktop {
+        display: none;
+    }
+
+    .uk-mobile {
+        display: inline;
+    }
+
+    .uk {
+        margin-top: 31px;
+    }
+
+    .uk-panel img{
+        height: max-content;
+    }
+
+    .slider_menu_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .slider_menu_info_list {
+        margin-top: 32px;
+    }
+
+    .slider_menu_info_ul {
+        align-items: center;
+    }
+
+    .slider_menu_info_item{
+        position: relative;
+        margin: 0 auto;
+        width: 230px;
+    }
+
+    .slider_menu_info_item::before {
+        background-image: url(./images/mobile_champs.svg);
+        width: 30px;
+        height: 30px;
+        margin-left: -50px; 
+        position: absolute;
+        transform: translateY(-25%);
+        top: 25%;
+    }
+
+    #trial_session_slider {
+        width: max-content
+    }
+
 }
 
 .training_program {
@@ -461,10 +647,11 @@ body {
 
 .training_program_info {
     display: flex;
+    gap: 50px;
 }
 
 .training_program_info_text {
-    width: 417px;
+    max-width: 417px;
 }
 
 .training_program_info_title {
@@ -483,9 +670,6 @@ body {
     font-size: 20px;
     line-height: 30px;
     color: rgba(104, 148, 243, 1);
-}
-
-.training_item:not(:first-child) {
     margin-top: 12px;
 }
 
@@ -504,13 +688,66 @@ body {
 
 #trial_session_program {
     margin-top: 24px;
-    width: 386px;
+    max-width: 386px;
     background-color: rgba(51, 103, 188, 1);
     color: rgba(255, 255, 255, 1);
     margin-left: -33px;
 }
 
-.training_photos {
+@media (max-width: 980px) {
+    .training_program {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 870px) {
+    .training_program_container {
+        margin-top: 32px;
+    }
+
+    .training_program_info_title {
+        color: rgba(104, 148, 243, 1);
+        text-align: center;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .training_program_info {
+        display: block;
+    }
+
+    .training_item {
+        margin-left: 75px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .training_item::before {
+        background-image: url(./images/mobile_training.svg);
+        width: 58px;
+        height: 58px;
+        margin-left: -80px;
+    }
+
+    .training_program_info_img {
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #trial_session_program {
+        margin-top: 24px;
+        margin-left: 0px;
+    }
+
+    #trial_session_slider {
+        background-color: rgba(255, 255, 255, 1);
+        max-width: 353px;
+        color: rgba(93, 161, 248, 1);;
+    }
+}
+
+/*.training_photos {
     margin-top: 95px;
 }
 
@@ -518,7 +755,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 24px;
-}
+}*/
 
 .feedback {
     margin-top: 100px;
@@ -533,7 +770,7 @@ body {
     font-size: 56px;
     line-height: 80px;
     color: rgba(104, 148, 243, 1);
-    width: 420px;
+    max-width: 420px;
 }
 
 .feedback_screenshots {
@@ -543,23 +780,52 @@ body {
     margin-top: 60px;
 }
 
+@media (max-width: 980px) {
+    .feedback_title {
+        margin-left: 75px;
+    }
+}
+
+@media (max-width: 870px) {
+    .feedback {
+        margin-top: 32px;
+    }
+
+    .feedback_title {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    #feedback_2, #feedback_3 {
+        display: none;
+    }
+}
+
 .footer {
     width: 100%;
-    height: auto;
+    display: flex;
 }
 
 .footer_container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(93, 161, 248, 1);
+    justify-content: space-between;
+    width: 100%;
 }
 
 .footer_contacts_container {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    background-color: rgba(93, 161, 248, 1);
+    width: 50%;
+    box-sizing: border-box;
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer_contacts_wrapper {
+    margin-left: auto;
 }
 
 .footer_contacts_title {
@@ -612,10 +878,57 @@ body {
     margin-top: 36px;
 }
 
-#footer_contacts_map {
-    width: 600px;
-}
-
 #whatsapp {
     margin-left: 25px;
+}
+
+.space_mobile {
+    display: none;
+}
+
+#footer_contacts_map {
+    width: 50%;
+    height: 400px;
+}
+
+@media (max-width: 870px) {
+    .space_mobile {
+        display: block;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    .footer_container {
+        flex-direction: column;
+    }
+
+    .footer_contacts_container,
+    #footer_contacts_map {
+        width: 100% !important;
+        padding-bottom: 40px;
+    }
+
+    .footer_contacts_address h2 {
+        display: none;
+    }
+
+    .footer_contacts_wrapper {
+        text-align: center;
+        margin-left: 0;
+    }
+    #footer_contacts_map {
+        height: 300px;
+    }
+    .footer_contacts_title {
+        font-size: 36px;
+        line-height: 54px;
+    }
+}
+
+@media (max-width: 980px) {
+    .trial_session {
+        font-size: 16px;
+    }
 }
