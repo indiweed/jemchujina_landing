@@ -117,6 +117,7 @@ body {
 .intro_wrapper {
     padding: 0 100px;
     margin: 0 auto;
+    max-width: 1500px;
 }
 
 .header {
@@ -263,11 +264,9 @@ body {
 }
 
 .about_us_container {
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    justify-content: center;
     gap: 48px;
     margin-top: 48px;
 }
@@ -337,11 +336,12 @@ body {
     color: rgba(255, 255, 255, 1);
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center; /* Центрируем содержимое */
     align-items: center;
-    max-width: 100%;
-    padding-left: 95px;
-    padding-right: 116px;
+    max-width: 1200px; /* Устанавливаем максимальную ширину контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding-left: 20px; /* Уменьшите или уберите отступы по бокам */
+    padding-right: 20px;
 }
 
 .slider_menu_title {
@@ -402,6 +402,11 @@ body {
     margin-bottom: 0;
 }
 
+.custom-slider {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .uk {
     margin-top: 74px;
 }
@@ -412,7 +417,15 @@ body {
     width: 575px;
     height: 403px;
     object-fit: contain;
-    border-radius: 16px;
+}
+
+.uk-slider-items {
+    display: flex;
+    justify-content: center;
+}
+
+.uk-panel {
+    margin: 0 10px;
 }
 
 .uk-slider-items .uk-width-1-2 {
@@ -437,8 +450,8 @@ body {
 
 .training_program {
     display: flex;
-    justify-content: space-between;
-    padding: 0 100px;
+    justify-content: center;
+    margin-left: -230px;
     /*padding-bottom: 100px;*/
 }
 
@@ -509,8 +522,9 @@ body {
 
 .feedback {
     margin-top: 100px;
-    padding: 0 100px 100px 100px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
 }
 
 .feedback_title {
@@ -524,9 +538,9 @@ body {
 
 .feedback_screenshots {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 60px;
-    gap: 30px;
 }
 
 .footer {
@@ -536,12 +550,14 @@ body {
 
 .footer_container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(93, 161, 248, 1);
 }
 
 .footer_contacts_container {
-    background-color: rgba(93, 161, 248, 1);
-    flex-basis: 50%;
     padding-left: 100px;
+    padding-right: 100px;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -571,7 +587,8 @@ body {
 
 .footer_contacts_address {
     margin-top: 24px;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer_contacts_address h2 {
@@ -595,12 +612,10 @@ body {
     margin-top: 36px;
 }
 
-#whatsapp {
-    margin-left: 25px;
+#footer_contacts_map {
+    width: 600px;
 }
 
-.footer_contacts_map {
-    width: 50%;
-    background: url(./images/map.svg) no-repeat center;
-    background-size: cover;
+#whatsapp {
+    margin-left: 25px;
 }
