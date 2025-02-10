@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Спортивный клуб "Жемчужина"</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const clubInfo = document.querySelector('.club_info');
+            setTimeout(() => {
+                clubInfo.classList.add('visible');
+            }, 100);
+        });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.uk-slider-items .uk-width-1-2');
+            let currentIndex = 0;
+
+            function updateSlides() {
+                slides.forEach((slide, index) => {
+                    if (index === currentIndex) {
+                        slide.classList.add('uk-active');
+                    } else {
+                        slide.classList.remove('uk-active');
+                    }
+                });
+            }
+
+    updateSlides();
+});
+    </script>
+</head>
+<body>
+    <div class="body_wrapper">
+        <div class="intro">
+            <div class="intro_container">
+                <div class="intro_wrapper">
+                    <header class="header">
+                        <div class="header_container">
+                            <div class="header_logo_wrap">
+                                <img src="./images/logo.svg" alt="Логотип" id="logo">
+                                <div class="header_club_name">
+                                    Спортивный клуб «Жемчужина»
+                                    <span class="city">г. Уфа</span>
+                                </div>                    
+                            </div>
+                            <div class="header_navbar_wrap">
+                                <a href="#school">О школе</a>
+                                <a href="#competitions">Соревнования</a>
+                                <a href="#">Контакты</a>
+                            </div>
+                            <a class="header_phone" href="tel:+7 927 310 94 54">+7 927 310-94-54</a>
+                        </div>
+                    </header>
+                    <div class="club_info">
+                        <div class="club_desc">
+                            <div class="club_desc_up">Бережный подход</div>
+                            <div class="club_desc_down">Растим чемпионов <span class="space_text">с любовью и заботой</span></div>
+                        </div>
+                        <form action="#" target="_blank">
+                            <button class="trial_session" id="trial_session_intro">
+                                Записаться на пробное занятие
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main class="main">
+            <div class="main_container">
+                <div class="main_wrapper">
+                    <div class="about_us_title" id="school">
+                        Почему выбирают нас?
+                    </div>
+                    <div class="about_us_container">
+                        <div class="about_us_info">
+                            <ul class="about_us_ul">
+                                <li class="info_card">
+                                    <img src="./images/infoicon1.svg" alt="">
+                                    <div class="info_card_text" id="info_1">Наш приоритет - растить счастливых <span class="space_text">и здоровых чемпионок</span></div>
+                                        
+                                </li>
+                                <li class="info_card">
+                                    <img src="./images/infoicon3.svg" alt="">
+                                    <div class="info_card_text" id="info_2">Выполнение <span class="space_text">спортивных разрядов</span></div>
+                                </li>
+                                <li class="info_card">
+                                    <img src="./images/infoicon2.svg" alt="">
+                                    <div class="info_card_text" id="info_3">Соревнования городского, регионального <span class="space_text">и всероссийского уровня</span></div>
+                                </li>
+                                <li class="info_card">
+                                    <img src="./images/infoicon4.svg" alt="">
+                                    <div class="info_card_text" id="info_4">Просторный зал:<span class="space_text">4 площадки</span> <span id="info_space_text">с ковровым покрытием</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="video_container">
+                            <video class="video" width="563px" height="487px" controls>
+                                <source src="./images/videoo.mp4" type="video/mp4">
+                            </video>
+                            <form action="#" target="_blank">
+                                <button class="trial_session" id="trial_session_video">
+                                    Записаться на пробное занятие
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="slider_menu" id="competitions">
+                        <div class="slider_menu_container">
+                            <h1 class="slider_menu_title">
+                                Растим чемпионов
+                            </h1>
+                            <div class="slider_menu_info_list">
+                                <ul class="slider_menu_info_ul">
+                                    <li class="slider_menu_info_item">
+                                        <h2>5 воспитанниц</h2>
+                                        <p>мастера спорта России</p>
+                                    </li>
+                                    <li class="slider_menu_info_item">
+                                        <h2>32 воспитанницы</h2>
+                                        <p>кандидаты в мастера спорта</p>
+                                    </li>
+                                    <li class="slider_menu_info_item">
+                                        <h2>Призовые места</h2>
+                                        <p>на соревнованиях всероссийского и регионального уровня</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="uk uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true, autoplay: true, autoplay-interval: 3000, finite: true">
+                            <div class="uk-slider-items uk-grid uk-flex-center">
+                                <div class="uk-width-1-2">
+                                    <div class="uk-panel">
+                                        <img src="./images/champ_1.jpg" loading="lazy" alt="Слайд 1">
+                                    </div>
+                                </div>
+                                <div class="uk-width-1-2">
+                                    <div class="uk-panel">
+                                        <img src="./images//champ_2.jpg" loading="lazy" alt="Слайд 2">
+                                    </div>
+                                </div>
+                                <div class="uk-width-1-2">
+                                    <div class="uk-panel">
+                                        <img src="./images/champ_3.jpg" loading="lazy" alt="Слайд 3">
+                                    </div>
+                                </div>
+                                <div class="uk-width-1-2">
+                                    <div class="uk-panel">
+                                        <img src="./images/champ_4.jpg" loading="lazy" alt="Слайд 4">
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slider-item="previous"><img src="./images/prev.svg" alt="Назад"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slider-item="next"><img src="./images/next.svg" alt="Вперед"></a>
+                        </div>
+                        <div class="button-container">
+                            <form action="#" target="_blank">
+                                <button class="trial_session" id="trial_session_slider">
+                                    Записаться на пробное занятие
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="training_program">
+                        <div class="training_program_container">
+                            <div class="training_program_info">
+                                <div class="training_program_info_text">
+                                    <h1 class="training_program_info_title">Занятия <span class="space_text">для девочек</span> от 3-х лет</h1>
+                                    <ul class="training_program_info_ul">
+                                        <li class="training_item">
+                                            Группа начальной <span class="space_text">подготовки</span>
+                                        </li>
+                                        <li class="training_item">
+                                            Педагог с высшим <span class="space_text">психологическим</span> и педагогическим образованием
+                                        </li>
+                                        <li class="training_item">
+                                            Занятия в игровой форме!
+                                        </li>
+                                    </ul>
+                                    <div class="button-container">
+                                        <form action="#" target="_blank">
+                                            <button class="trial_session" id="trial_session_program">
+                                                Записаться на пробное занятие
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="training_program_info_img">
+                                    <img src="./images/train_progr.svg" alt="">
+                                </div>
+                            </div>
+                            <!--<div class="training_photos">
+                                <div class="training_photos_three">
+                                    <img src="/images/training_photos_three.svg" alt="">
+                                    <img src="/images/training_photos_three.svg" alt="">
+                                    <img src="/images/training_photos_three.svg" alt="">
+                                </div>
+                                <div class="training_photos_two">
+                                    <img src="/images/training_photos_two.svg" alt="">
+                                    <img src="/images/training_photos_two.svg" alt="">
+                                </div>
+                                <div class="training_photos_three">
+                                    <img src="/images/training_photos_three.svg" alt="">
+                                    <img src="/images/training_photos_three.svg" alt="">
+                                    <img src="/images/training_photos_three.svg" alt="">
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="feedback">
+                        <div class="feedback_container">
+                            <h1 class="feedback_title">
+                                Отзывы родителей
+                            </h1>
+                            <div class="feedback_screenshots">
+                                <img src="./images/feedback_1.svg" alt="">
+                                <img src="./images/feedback_2.svg" alt="">
+                                <img src="./images/feedback_3.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer_container">
+                <div class="footer_contacts_container">
+                    <img src="./images/logo_logo.svg" alt="Логотип">
+                    <h1 class="footer_contacts_title">Контакты</h1>
+                    <a href="tel: +7 927 310 94 54" class="footer_number">+7 927 310-94-54</a>
+                    <div class="footer_contacts_address">
+                        <h2>Приходите в гости:</h2>
+                        <p>г. Уфа, ул Менделеева, 136/5 к11</p>
+                    </div>
+                    <div class="footer_contacts_social">
+                        <a id="vk" href="https://vk.com/sk_zhemchuzhina_ufa"><img src="./images/simple-icons_vk.svg" alt="Группа ВК"></a>
+                        <a id="whatsapp" href="#"><img src="./images/simple-icons_whatsapp.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer_contacts_map">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>

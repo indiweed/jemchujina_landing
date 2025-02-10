@@ -1,0 +1,606 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+    color: white;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@200..800&display=swap');
+
+body {
+    margin: 0 auto;
+}
+
+.intro {
+    background: url(./images/intro_backgrnd.svg) no-repeat;
+    background-size: cover;
+    height: 700px;
+    z-index: 1;
+}
+
+.intro_container {
+    background: rgba(60, 54, 62, 0.46);
+    height: 700px;
+    z-index: 2;
+}
+
+.intro_wrapper {
+    padding: 0 100px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    z-index: 3;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo_wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.header_club_name {
+    text-align: left;
+    width: 150px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    margin-left: -10px;
+    cursor: default;
+    user-select: none;
+}
+
+.city {
+    display: block;
+}
+
+.header_navbar_wrap {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21.86px;
+    display: flex;
+    width: 357px;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+.header_navbar_wrap a {
+    color: rgba(255, 255, 255, 1);
+}
+
+.header_navbar_wrap a:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.header_phone {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27.32px;
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 1);;
+}
+
+.header_phone:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.club_info {
+    margin-top: 94px;
+    width: 470px;
+}
+
+/**/
+
+.club_info {
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.club_info.visible {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/**/
+
+.club_desc_up {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 88px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.club_desc_down {
+    margin-top: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.18px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.space_text {
+    display: block;
+}
+
+.trial_session {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27.32px;
+    text-align: center;
+    height: 67px;
+    border-radius: 16px;
+}
+
+#trial_session_intro {
+    margin-top: 36px;
+    width: 414px;
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(91.5deg, #5DA1F8 0%, #3164B9 100%);
+}
+
+.main {
+    max-width: calc(100vw-13vw);
+    height: auto;
+}
+
+.about_us_title {
+    font-family: 'Cormorant Garamond', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    color: rgba(36, 99, 235, 1);
+    margin-top: 77px;
+}
+
+.about_us_container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+.about_us_info {
+    color: rgba(84, 145, 223, 1);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.info_card {
+    display: flex;
+    align-items: flex-start;
+    height: max-content;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.about_us_ul {
+    display: block;
+    gap: 48px;
+    padding: 0;
+}
+
+#info_1 {
+    width: 240px;
+}
+
+#info_2 {
+    width: 280px;
+}
+
+#info_3 {
+    width: 268px;
+}
+
+#info_4 {
+    width: 240px;
+}
+
+.video {
+    width: 563px;
+    height: 320px;
+}
+
+.video_container {
+    display: block;
+}
+
+#trial_session_video {
+    width: 563px;
+    background: rgba(51, 103, 188, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-top: 34px;
+}
+
+.slider_menu {
+    background-color: rgba(105, 152, 255, 1);
+    padding-top: 39px;
+    margin-top: 162px;
+    padding-bottom: 53px;
+}
+
+.slider_menu_container {
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding-left: 95px;
+    padding-right: 116px;
+}
+
+.slider_menu_title {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 90px;
+    width: 563px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.slider_menu_info_list {
+    width: 389px;
+}
+
+.slider_menu_info_ul {
+    display: block;
+}
+
+.slider_menu_info_item::not(:last-child) {
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+    display: flex;
+}
+
+.slider_menu_info_item::before {
+    content: "";
+    background-image: url(./images/marker.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    margin-left: -20px; 
+    margin-top: 15px;
+}
+
+.slider_menu_info_item:not(:first-child) {
+    margin-top: 24px;
+}
+
+.slider_menu_info_item h2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+}
+
+.slider_menu_info_item p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.uk {
+    margin-top: 74px;
+}
+
+.uk-panel img {
+    display: block;
+    margin: 0 auto;
+    width: 575px;
+    height: 403px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.uk-slider-items .uk-width-1-2 {
+    transition: opacity 0.5s ease;
+}
+
+.uk-slider-items .uk-width-1-2:not(.uk-active) {
+    opacity: 0.5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+#trial_session_slider {
+    background-color: rgba(255, 255, 255, 1);
+    width: 575px;
+    color: rgba(93, 161, 248, 1);;
+}
+
+.training_program {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    /*padding-bottom: 100px;*/
+}
+
+.training_program_container {
+    margin-top: 137px;
+}
+
+.training_program_info {
+    display: flex;
+}
+
+.training_program_info_text {
+    width: 417px;
+}
+
+.training_program_info_title {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 80px;
+    color: rgba(51, 103, 188, 1);
+}
+
+.training_item {
+    position: relative;
+    margin-left: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(104, 148, 243, 1);
+}
+
+.training_item:not(:first-child) {
+    margin-top: 12px;
+}
+
+.training_item::before {
+    content: "";
+    background-image: url(./images/train_prog_marker.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-left: -44px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#trial_session_program {
+    margin-top: 24px;
+    width: 386px;
+    background-color: rgba(51, 103, 188, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-left: -33px;
+}
+
+.training_photos {
+    margin-top: 95px;
+}
+
+.training_photos_three, .training_photos_two {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.feedback {
+    margin-top: 100px;
+    padding: 0 100px;
+    display: block;
+}
+
+.feedback_title {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 80px;
+    color: rgba(104, 148, 243, 1);
+    width: 420px;
+}
+
+.feedback_screenshots {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+}
+
+.footer_container {
+    display: flex;
+}
+
+.footer_contacts_container {
+    background-color: rgba(93, 161, 248, 1);
+    flex-basis: 50%;
+    padding-left: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer_contacts_title {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 36px;
+}
+
+.footer_number {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 36px;
+}
+
+.footer_number:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer_contacts_address {
+    margin-top: 24px;
+    display: block;
+}
+
+.footer_contacts_address h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer_contacts_address p {
+    margin-top: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 1);;
+}
+
+.footer_contacts_social {
+    margin-top: 36px;
+}
+
+#whatsapp {
+    margin-left: 25px;
+}
+
+.footer_contacts_map {
+    width: 50%;
+    background: url(./images/map.svg) no-repeat center;
+    background-size: cover;
+}
