@@ -397,6 +397,14 @@ form {
 }
 
 @media (max-width: 870px) {
+    #info_1, #info_2, #info_3, #info_4 {
+        width: 280px;
+    }
+
+    .form_trial{
+        width: 350px !important;
+    }
+
     .about_us_title {
         margin-top: 48px;
     }
@@ -410,43 +418,48 @@ form {
     }
 
     .about_us_container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center
-        }
+        display: flex;
+        flex-direction: column;
+    }
 
-        .about_us_title {
-            font-size: 32px;
-            line-height: 40px;
-        }
-        
-        .about_us_info {
-            margin: 0 auto;
-        }
+    .about_us_title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .about_us_ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
     
-        #trial_session_video {
-            width: 100%;
-            background: rgba(51, 103, 188, 1);
-            color: rgba(255, 255, 255, 1);
-            margin-top: 34px;
-        }
+    .about_us_info {
+        margin: 0 auto;
+    }
 
-        .video_container {
-            margin-top: 48px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0; /* Удаляем отступы, чтобы контейнер занимал всю ширину */
-            width: 100%; /* Убедитесь, что контейнер занимает всю ширину */
-        }
-        
-        .video {
-            width: 100%; /* Занимает 100% ширины родительского контейнера */
-            height: auto; /* Высота автоматически подстраивается */
-            max-width: 100%; /* Не превышает ширину экрана */
-        }
+    #trial_session_video {
+        width: 100%;
+        background: rgba(51, 103, 188, 1);
+        color: rgba(255, 255, 255, 1);
+        margin-top: 34px;
+    }
+
+    .video_container {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0; /* Удаляем отступы, чтобы контейнер занимал всю ширину */
+        width: 100%; /* Убедитесь, что контейнер занимает всю ширину */
+    }
+    
+    .video {
+        width: 100%; /* Занимает 100% ширины родительского контейнера */
+        height: auto; /* Высота автоматически подстраивается */
+        max-width: 100%; /* Не превышает ширину экрана */
+    }
 }
 
 .slider_menu {
@@ -747,13 +760,20 @@ form {
         line-height: 40px;
     }
 
+    .training_program_info_text {
+        display: flex;
+        flex-direction: column;
+    }
+
     .training_program_info_ul {
         margin-left: 60px;
         margin-top: 40px;
     }
 
     .training_program_info {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .training_item {
