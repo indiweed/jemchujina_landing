@@ -113,7 +113,7 @@ body {
 }
 
 .intro {
-    background: url(./images/intro_backgrnd.svg) no-repeat;
+    background: url(./images/intro_backgrnd.svg) center no-repeat;
     background-size: cover;
     height: 700px;
     z-index: 1;
