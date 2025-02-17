@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Спортивный клуб "Жемчужина"</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
+    <link rel="icon" href="./images/logo.svg" type="image/svg">
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -64,23 +65,58 @@
                                 <a href="#competitions">Соревнования</a>
                                 <a href="#footer_contacts">Контакты</a>
                             </div>
-                            <a class="header_phone" href="tel:+7 927 310 94 54">+7 927 310-94-54</a>
+                            <div class="header_phone_container">
+                                <a class="header_phone" href="tel:+7 927 310 94 54">+7 927 310-94-54</a>
+                                <a class="header_phone" href="tel:+7 987 254 46 58">+7 987 254-46-58</a>
+                            </div>
                         </div>
                     </header>
-                    <div class="club_info">
-                        <div class="club_desc">
-                            <div class="club_desc_up">Бережный <span class="space_text">подход</span></div>
-                            <div class="club_desc_down">Растим чемпионов <span class="space_text">с любовью и заботой</span></div>
-                        </div>
-                        <form action="https://wa.me/79273109454" target="_blank" class="trial_session_form">
-                            <button class="trial_session_btn" id="trial_session_intro">
-                                Записаться на пробное занятие
-                            </button>
-                        </form>
+                    <div class="intro-slider uk-visible-toggle uk-dark" uk-slider="center: true" autoplay>
+                        <ul class="uk-slider-items uk-flex">
+                            <li class="uk-width-1-1">
+                                <div class="uk-cover-container">
+                                    <img src="./images/intro_backgrnd.svg" alt="">
+                                    <div class="overlay"></div>
+                                    <div class="uk-position-center-left">
+                                        <div class="club_info">
+                                            <h1 class="club_desc_up">С любовью к гимнастике и детям!</h1>
+                                            <span class="club_desc_down">Растим чемпионов с любовью и заботой</spanc>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uk-width-1-1">
+                                <div class="uk-cover-container">
+                                    <img src="./images/intro_backgrnd_2.svg" alt="">
+                                    <div class="overlay"></div>
+                                    <div class="uk-position-center-left">
+                                        <div class="club_info">
+                                            <h1 class="club_desc_up">Команда профессионалов</h1>
+                                            <span class="club_desc_down">Тренеры - мастера спорта с педагогическим образованием</spanc>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="uk-width-1-1">
+                                <div class="uk-cover-container">
+                                    <img src="./images/intro_backgrnd_3.svg" alt="">
+                                    <div class="overlay"></div>
+                                    <div class="uk-position-center-left">
+                                        <div class="club_info">
+                                            <h1 class="club_desc_up">Просторный зал</h1>
+                                            <span class="club_desc_down">4 площадки с ковровым покрытием</spanc>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <a class="uk-position-center-left uk-margin-medium-left uk-position-small uk-hidden-hover uk-intro-slider-btn" uk-slider-item="previous"><img src="./images/intro_prev.svg" alt=""></a>
+                            <a class="uk-position-center-right uk-margin-medium-right uk-position-small uk-hidden-hover uk-intro-slider-btn" uk-slider-item="next"><img src="./images/intro_next.svg" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
+        
         <main class="main">
             <div class="main_container">
                 <div class="main_wrapper">
@@ -115,7 +151,7 @@
                             </form>
                         </div>
                         <div class="video_container">
-                            <video class="video" controls>
+                            <video class="video" controls autoplay muted>
                                 <source src="./images/videoo.mp4" type="video/mp4">
                             </video>
                             <form action="https://wa.me/79273109454" target="_blank"  class="trial_session_form">
@@ -130,44 +166,44 @@
                             <h1 class="slider_menu_title">
                                 Растим чемпионов
                             </h1>
-                            <img class="carousel_mobile" src="./images/carousel2.svg" alt="">
-                            <div class="uk uk-mobile uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true, autoplay: true, autoplay-interval: 3000, finite: true">
-                                <div class="uk-slider-items uk-grid uk-grid-small">
-                                    <div class="uk-width-1-2">
+                            <!--<img class="carousel_mobile" src="./images/carousel2.svg" alt="">-->
+                            <div class="uk uk-mobile uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true" autoplay>
+                                <div class="uk-slider-items uk-flex">
+                                    <div class="uk-width-1-1">
                                         <div class="uk-panel">
-                                            <img src="./images/carousel1.svg" loading="eager" alt="Слайд 1">
+                                            <img src="./images/carousel1.svg" loading="eager" alt="">
                                         </div>
                                     </div>
-                                    <div class="uk-width-1-2">
+                                    <div class="uk-width-1-1">
                                         <div class="uk-panel">
-                                            <img src="./images/carousel2.svg" loading="eager" alt="Слайд 2">
+                                            <img src="./images/carousel2.svg" loading="eager" alt="">
                                         </div>
                                     </div>
-                                    <div class="uk-width-1-2">
+                                    <div class="uk-width-1-1">
                                         <div class="uk-panel">
-                                            <img src="./images/carousel3.svg" loading="eager" alt="Слайд 3">
+                                            <img src="./images/carousel3.svg" loading="eager" alt="">
                                         </div>
                                     </div>
-                                    <div class="uk-width-1-2">
+                                    <div class="uk-width-1-1">
                                         <div class="uk-panel">
-                                            <img src="./images/carousel4.svg" loading="eager" alt="Слайд 4">
+                                            <img src="./images/carousel4.svg" loading="eager" alt="">
                                         </div>
                                     </div>
-                                    <div class="uk-width-1-2">
+                                    <div class="uk-width-1-1">
                                         <div class="uk-panel">
-                                            <img src="./images/carousel5.svg" loading="eager" alt="Слайд 4">
+                                            <img src="./images/carousel5.svg" loading="eager" alt="">
                                         </div>
                                     </div>
-                                    <div class="uk-width-1-2">
+                                    <div class="uk-width-1-1">
                                         <div class="uk-panel">
-                                            <img src="./images/carousel6.svg" loading="eager" alt="Слайд 4">
+                                            <img src="./images/carousel6.svg" loading="eager" alt="">
                                         </div>
                                     </div>
                                 </div>
                                 <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slider-item="previous"><img src="./images/prevbtn_mobile.svg" alt="Назад"></a>
-                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slider-item="next"><img src="./images/arrowbtn_mobile.svg" alt="Вперед"></a>
+                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slider-item="next"><img src="./images/arrowbtn_mobile.svg" alt="Вперед"></a>
                             </div>
-                            <div class="slider_menu_info_list">
+                        <div class="slider_menu_info_list">
                                 <ul class="slider_menu_info_ul">
                                     <li class="slider_menu_info_item">
                                         <h2>5 гимнасток</h2>
@@ -185,9 +221,9 @@
                                         <h2>Участницы чемпионата, кубка и первенства России</h2>
                                     </li>
                                 </ul>
-                            </div>
                         </div>
-                        <div class="uk uk-desktop uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true, autoplay: true, autoplay-interval: 3000, finite: true">
+                    </div>
+                    <div class="uk uk-desktop uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true">
                             <div class="uk-slider-items uk-grid uk-flex-center">
                                 <div class="uk-width-1-2">
                                     <div class="uk-panel">
@@ -222,14 +258,14 @@
                             </div>
                             <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slider-item="previous"><img src="./images/prev.svg" alt="Назад"></a>
                             <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slider-item="next"><img src="./images/next.svg" alt="Вперед"></a>
-                        </div>
-                        <div class="button-container">
+                    </div>
+                    <div class="button-container">
                             <form action="https://wa.me/79273109454" target="_blank" class="trial_session_form_slider">
                                 <button class="trial_session_btn" id="trial_session_slider">
                                     Записаться на пробное занятие
                                 </button>
                             </form>
-                        </div>
+                    </div>
                     </div>
                     <div class="training_program">
                         <div class="training_program_container">
@@ -278,14 +314,40 @@
                         </div>
                     </div>
                     <div class="feedback">
-                        <div class="feedback_container">
+                        <div class="feedback_container_desktop">
                             <p class="feedback_title">
                                 Отзывы <span class="space_text space_mobile"></span> родителей
-                            </з>
-                            <div class="feedback_screenshots">
+                            </p>
+                            <div class="feedback_screenshots_desktop">
                                 <img src="./images/feedback_1.svg" alt="" id="feedback_1">
                                 <img src="./images/feedback_2.svg" alt="" id="feedback_2">
                                 <img src="./images/feedback_3.svg" alt="" id="feedback_3">
+                            </div>
+                        </div>
+                        <div class="feedback_container_mobile">
+                            <p class="feedback_title">
+                                Отзывы <span class="space_text space_mobile"></span> родителей
+                            </p>
+                            <div class="feedback_screenshots_mobile uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true" autoplay>
+                                <div class="uk-slider-items uk-flex">
+                                    <div class="uk-width-1-1">
+                                        <div class="uk-panel">
+                                            <img src="./images/feedback_1.svg" loading="eager" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-1">
+                                        <div class="uk-panel">
+                                            <img src="./images/feedback_2.svg" loading="eager" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-1">
+                                        <div class="uk-panel">
+                                            <img src="./images/feedback_3.svg" loading="eager" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slider-item="previous"><img src="./images/prevbtn_mobile.svg" alt="Назад"></a>
+                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slider-item="next"><img src="./images/arrowbtn_mobile.svg" alt="Вперед"></a>
                             </div>
                         </div>
                     </div>
@@ -304,9 +366,11 @@
                             <p>г. Уфа, ул Менделеева, <span class="space_text space_mobile"></span> 136/5 к11</p>
                         </div>
                         <div class="footer_contacts_social">
-                            <a id="vk" target="_blank" href="https://vk.com/sk_zhemchuzhina_ufa"><img src="./images/simple-icons_vk.svg" alt="Группа ВК"></a>
-                            <a id="whatsapp" target="_blank" href="https://wa.me/79273109454"><img src="./images/simple-icons_whatsapp.svg" alt=""></a>
+                            <a id="instagram" target="_blank" href="https://www.instagram.com/sk_zhemchuzhina_ufa?igsh=MTJ5bW44b3E5bGhhdA=="><img src="./images/instagram.webp" alt="instagram"></a>
+                            <span id="inst_info">*</span>
+                            <a id="whatsapp" target="_blank" href="https://wa.me/79273109454"><img src="./images/simple-icons_whatsapp.svg" alt="whatsapp"></a>
                         </div>
+                        <p id="inst_info_text">*Запрещенная на территории Российской Федерации организация</p>
                     </div>
                 </div>
                 <div id="footer_contacts_map" style="width: 50% ; height: 100%;"></div>
