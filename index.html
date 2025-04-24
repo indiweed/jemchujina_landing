@@ -7,7 +7,6 @@
     <title>Спортивный клуб "Жемчужина"</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
     <link rel="icon" href="./images/logo.svg" type="image/svg">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const clubInfo = document.querySelector('.club_info');
@@ -15,26 +14,14 @@
                 clubInfo.classList.add('visible');
             }, 100);
         });
-
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.uk-slider-items .uk-width-1-2');
-            let currentIndex = 0;
-
-            function updateSlides() {
-                slides.forEach((slide, index) => {
-                    if (index === currentIndex) {
-                        slide.classList.add('uk-active');
-                    } else {
-                        slide.classList.remove('uk-active');
-                    }
-                });
-            }
-
-    updateSlides();
-});
+        UIkit.slider(element, {
+            center: true,
+            autoplay: true,
+        });
     </script>
+    <script src="services/slider.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8822bfca-3640-4f11-9bda-78025dbd3ac2&lang=ru_RU" type="text/javascript">
     </script>
     <script>
@@ -71,40 +58,40 @@
                             </div>
                         </div>
                     </header>
-                    <div class="intro-slider uk-visible-toggle uk-dark" uk-slider="center: true" autoplay>
+                    <div class="intro-slider uk-visible-toggle uk-dark" uk-slider="center: true; autoplay: true; autoplay-interval: 2000">
                         <ul class="uk-slider-items uk-flex">
                             <li class="uk-width-1-1">
                                 <div class="uk-cover-container">
-                                    <img src="./images/intro_backgrnd.svg" alt="">
+                                    <img src="./images/hero_background_1.png" alt="">
                                     <div class="overlay"></div>
                                     <div class="uk-position-center-left">
                                         <div class="club_info">
                                             <h1 class="club_desc_up">С любовью к гимнастике и детям!</h1>
-                                            <span class="club_desc_down">Растим чемпионов с любовью и заботой</spanc>
+                                            <!--<span class="club_desc_down">Растим чемпионов с любовью и заботой</span>-->
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="uk-width-1-1">
                                 <div class="uk-cover-container">
-                                    <img src="./images/intro_backgrnd_2.svg" alt="">
+                                    <img src="./images/hero_background_2.png" alt="">
                                     <div class="overlay"></div>
                                     <div class="uk-position-center-left">
                                         <div class="club_info">
                                             <h1 class="club_desc_up">Команда профессионалов</h1>
-                                            <span class="club_desc_down">Тренеры - мастера спорта с педагогическим образованием</spanc>
+                                            <span class="club_desc_down">Тренеры - мастера спорта с педагогическим образованием</span>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="uk-width-1-1">
                                 <div class="uk-cover-container">
-                                    <img src="./images/intro_backgrnd_3.svg" alt="">
+                                    <img src="./images/hero_background_3.png" alt="">
                                     <div class="overlay"></div>
                                     <div class="uk-position-center-left">
                                         <div class="club_info">
                                             <h1 class="club_desc_up">Просторный зал</h1>
-                                            <span class="club_desc_down">4 площадки с ковровым покрытием</spanc>
+                                            <span class="club_desc_down">4 площадки с ковровым покрытием</span>
                                         </div>
                                     </div>
                                 </div>
@@ -128,20 +115,20 @@
                             <ul class="about_us_ul">
                                 <li class="info_card">
                                     <img src="./images/infoicon1.svg" alt="">
-                                    <div class="info_card_text" id="info_1">Наш приоритет – растить счастливых <span class="space_text">и здоровых чемпионок</span></div>
+                                    <div class="info_card_text" id="info_1">Наш приоритет – растить счастливых <br> и здоровых чемпионок</div>
                                         
                                 </li>
                                 <li class="info_card">
                                     <img src="./images/infoicon3.svg" alt="">
-                                    <div class="info_card_text" id="info_2">Выполнение <span class="space_text">спортивных разрядов</span></div>
+                                    <div class="info_card_text" id="info_2">Успешное выполнение спортивных разрядов</div>
                                 </li>
                                 <li class="info_card">
                                     <img src="./images/infoicon2.svg" alt="">
-                                    <div class="info_card_text" id="info_3">Соревнования городского, регионального <span class="space_text">и всероссийского уровня</span></div>
+                                    <div class="info_card_text" id="info_3">Соревнования городского, регионального <br> и всероссийского уровня</div>
                                 </li>
                                 <li class="info_card">
                                     <img src="./images/infoicon4.svg" alt="">
-                                    <div class="info_card_text" id="info_4">Просторный зал: <span class="space_text">4 площадки <span id="info_space_text_mobile">с ковровым покрытием</span></span> <span id="info_space_text_desktop">с ковровым покрытием</span></div>
+                                    <div class="info_card_text" id="info_4">Просторный зал: <br> 4 площадки <br> с ковровым покрытием</div>
                                 </li>
                             </ul>
                             <form class="form_trial" action="https://wa.me/79273109454" target="_blank"  class="trial_session_form">
@@ -151,7 +138,7 @@
                             </form>
                         </div>
                         <div class="video_container">
-                            <video class="video" controls autoplay muted>
+                            <video class="video" autoplay muted>
                                 <source src="./images/videoo.mp4" type="video/mp4">
                             </video>
                             <form action="https://wa.me/79273109454" target="_blank"  class="trial_session_form">
@@ -206,16 +193,16 @@
                         <div class="slider_menu_info_list">
                                 <ul class="slider_menu_info_ul">
                                     <li class="slider_menu_info_item">
-                                        <h2>5 гимнасток</h2>
-                                        <p>мастера спорта России</p>
+                                        <h2 id="master_of_sports">5 мастеров спорта</h2>
+                                        <!--<p>мастера спорта России</p>-->
                                     </li>
                                     <li class="slider_menu_info_item">
-                                        <h2>32 гимнастки</h2>
-                                        <p>кандидаты в мастера спорта</p>
+                                        <h2 id="candidates_for_master_of_sports">32 кандидата в мастера спорта</h2>
+                                        <!--<p>кандидаты в мастера спорта</p>-->
                                     </li>
                                     <li class="slider_menu_info_item">
                                         <h2>Победители и призеры</h2>
-                                        <p>соревнований регионального <span class="space_text">и всероссийского уровня</span></p>
+                                        <p>соревнований регионального <br> и всероссийского уровня</p>
                                     </li>
                                     <li class="slider_menu_info_item">
                                         <h2>Участницы чемпионата, кубка и первенства России</h2>
@@ -227,32 +214,32 @@
                             <div class="uk-slider-items uk-grid uk-flex-center">
                                 <div class="uk-width-1-2">
                                     <div class="uk-panel">
-                                        <img src="./images/carousel1.svg" loading="eager" alt="Слайд 1">
+                                        <img src="./images/champions_1.png" loading="eager" alt="">
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2">
                                     <div class="uk-panel">
-                                        <img src="./images/carousel2.svg" loading="eager" alt="Слайд 2">
+                                        <img src="./images/champions_2.png" loading="eager" alt="">
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2">
                                     <div class="uk-panel">
-                                        <img src="./images/carousel3.svg" loading="eager" alt="Слайд 3">
+                                        <img src="./images/champions_3.png" loading="eager" alt="">
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2">
                                     <div class="uk-panel">
-                                        <img src="./images/carousel4.svg" loading="eager" alt="Слайд 4">
+                                        <img src="./images/champions_4.png" loading="eager" alt="">
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2">
                                     <div class="uk-panel">
-                                        <img src="./images/carousel5.svg" loading="eager" alt="Слайд 4">
+                                        <img src="./images/champions_5.png" loading="eager" alt="">
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2">
                                     <div class="uk-panel">
-                                        <img src="./images/carousel6.svg" loading="eager" alt="Слайд 4">
+                                        <img src="./images/champions_6.png" loading="eager" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -271,16 +258,16 @@
                         <div class="training_program_container">
                             <div class="training_program_info">
                                 <div class="training_program_info_text">
-                                    <h1 class="training_program_info_title">Занятия <span class="space_text">для девочек</span> от 3-х лет</h1>
+                                    <h1 class="training_program_info_title">Занятия <br> для девочек от 3-х лет</h1>
                                     <ul class="training_program_info_ul">
                                         <li class="training_item">
-                                            Группа начальной <span class="space_text">подготовки</span>
-                                        </li>
-                                        <li class="training_item">
-                                            Тренер с высшим <span class="space_text">психологическим</span> и педагогическим образованием
-                                        </li>
-                                        <li class="training_item">
                                             Занятия в игровой форме!
+                                        </li>                                        
+                                        <li class="training_item">
+                                            Тренер с высшим <br> психологическим <br> и педагогическим образованием
+                                        </li>
+                                        <li class="training_item">
+                                            Комфортные условия <br> для тренировок
                                         </li>
                                     </ul>
                                     <div class="button-container">
@@ -316,7 +303,7 @@
                     <div class="feedback">
                         <div class="feedback_container_desktop">
                             <p class="feedback_title">
-                                Отзывы <span class="space_text space_mobile"></span> родителей
+                                Отзывы <br> родителей
                             </p>
                             <div class="feedback_screenshots_desktop">
                                 <img src="./images/feedback_1.svg" alt="" id="feedback_1">
@@ -326,7 +313,7 @@
                         </div>
                         <div class="feedback_container_mobile">
                             <p class="feedback_title">
-                                Отзывы <span class="space_text space_mobile"></span> родителей
+                                Отзывы <br> родителей
                             </p>
                             <div class="feedback_screenshots_mobile uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true" autoplay>
                                 <div class="uk-slider-items uk-flex">
@@ -360,10 +347,13 @@
                     <div class="footer_contacts_wrapper">
                         <img src="./images/logo_logo.svg" alt="Логотип">
                         <h1 class="footer_contacts_title">Контакты</h1>
-                        <a href="tel: +7 927 310 94 54" class="footer_number">+7 927 310-94-54</a>
+                        <div class="footer_phone_numbers">
+                            <a href="tel: +7 927 310 94 54" class="footer_number footer_number_up">+7 927 310-94-54</a>
+                            <a href="tel: +7 987 254 46 58" class="footer_number footer_number_down">+7 987 254-46-58</a>
+                        </div>
                         <div class="footer_contacts_address">
                             <h2>Приходите в гости:</h2>
-                            <p>г. Уфа, ул Менделеева, <span class="space_text space_mobile"></span> 136/5 к11</p>
+                            <p>г. Уфа, ул Менделеева, <br> 136/5 к11</p>
                         </div>
                         <div class="footer_contacts_social">
                             <a id="instagram" target="_blank" href="https://www.instagram.com/sk_zhemchuzhina_ufa?igsh=MTJ5bW44b3E5bGhhdA=="><img src="./images/instagram.webp" alt="instagram"></a>
