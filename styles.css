@@ -134,6 +134,8 @@ body {
 }
 
 .logo {
+    width: 190px;
+    height: auto;
     margin-top: 32px;
 }
 
@@ -181,6 +183,83 @@ body {
     text-decoration: none;
 }
 
+.burger_btn {
+    right: 20px;
+    display: none;
+}
+
+.burger_menu {
+    top: -1000px;
+    position: absolute;
+    z-index: 300;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 640px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transition: top 0.4s ease;
+}
+
+.burger_menu.active {
+    top: 0px;
+}
+
+.burger_top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger_nav_menu {
+    text-align: center;
+}
+
+.burger_nav_menu ul {
+    padding: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.burger_nav_menu ul li a{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+}
+
+.burger_phone {
+    margin-top: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.burger_phone a:hover {
+    text-decoration: none;
+}
+
+.burger_contacts_social {
+    width: 90px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.burger_contacts_social a img {
+    width: 32px;
+    height: 32px;
+}
+
 @media(max-width: 980px) {
     .header {
         padding: 0 20px;
@@ -194,6 +273,10 @@ body {
 
     .header_navbar_container, .header_phone {
         display: none;
+    }
+
+    .burger_btn {
+        display: block;
     }
 }
 
@@ -265,20 +348,19 @@ body {
     max-width: 400px;
 }
 
-/*#trial_session_intro {
-    margin-top: 36px;
-    color: rgba(255, 255, 255, 1);
-    background: linear-gradient(91.5deg, #5DA1F8 0%, #3164B9 100%);
-}*/
-
 @media (max-width: 980px) {
     .club_info{
-        width: 280px;
+        max-width: 320px;
+        margin-top: 50px;
     }
 
     .club_desc_up {
-        font-size: 48px;
+        font-size: 43px;
         line-height: 48px;
+    }
+
+    .club_desc_down {
+        font-size: 20px;
     }
 
     .trial_session_btn {
@@ -286,7 +368,7 @@ body {
     }
 
     .intro_button {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     .uk-intro-slider-btn {
@@ -309,6 +391,15 @@ body {
     }
     .intro_arrows {
         display: none;
+    }
+    .intro_button {
+        width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .club_info {
+        margin-left: 10px;
     }
 }
 
@@ -493,7 +584,7 @@ body {
 }
 
 .slider_menu {
-    background-color: rgba(105, 152, 255, 1);
+    background: linear-gradient(243.12deg, #D16BA5 -0.69%, #86A8E7 52.94%, #5FFBF1 111.53%);
     padding-top: 39px;
     margin-top: 100px;
     padding-bottom: 53px;
@@ -503,6 +594,7 @@ body {
     color: rgba(255, 255, 255, 1);
     display: flex;
     flex-wrap: nowrap;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
     max-width: 1500px;
@@ -568,6 +660,7 @@ body {
     line-height: 30px;
     margin-top: 4px;
     margin-bottom: 0;
+    color: white;
 }
 
 #master_of_sports, #candidates_for_master_of_sports {
@@ -579,7 +672,6 @@ body {
         padding: 0 20px;
     }
 }
-
 
 @media (max-width: 870px) {
     .slider_menu {
@@ -721,7 +813,7 @@ body {
     display: flex;
     justify-content: center;
     margin-left: -230px;
-    margin-top: 137px;
+    margin-top: 209px;
 }
 
 .training_program_info {
@@ -772,6 +864,22 @@ body {
     max-width: 386px;
 }
 
+.training_program_info_img {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -80px;
+}
+
+.training_program_info_img img {
+    object-fit: none;
+    width: max-content;
+}
+
+.training_program_mobile {
+    display: none;
+}
+
 @media (max-width: 1100px) {
     .training_program {
         margin-left: 0px;
@@ -783,10 +891,22 @@ body {
         display: none;
     }
 
-    .training_program {
+    .training_program:not(.training_program_mobile) {
         padding: 0 20px;
         margin-top: 0px;
         width: 100%;
+    }
+
+    .training_program_desktop img{
+        display: none;
+    }
+
+    .training_program_mobile {
+        display: block;
+    }
+
+    .training_program_info {
+        gap: 0;
     }
 
     .training_program_info_title {
@@ -849,21 +969,61 @@ body {
     gap: 24px;
 }*/
 
+.trainers_container {
+    margin-top: 170px;
+}
+
+.trainers_photo-mobile {
+    display: none;
+}
+
+.trainers_title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', sans-serif;
+    text-transform: uppercase;
+    color: #3367BC;
+    font-weight: 600;
+    font-size: 72px;
+}
+
+.trainer_card {
+    max-width: max-content;
+    padding-left: 60px;
+}
+
+.trainer_card h2, p {
+    font-family: 'Manrope', sans-serif;
+    color: #3367BC;
+}
+
+.trainer_card h2 {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.trainer_bio {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.trainer_exp {
+    font-weight: 700;
+    font-size: 16px;
+}
+
 .feedback {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     max-width: 1500px;
     margin: 0 auto;
 }
 
 .feedback_container_desktop {
-    display: inline;
+    display: block;
     padding: 100px;
 }
 
 .feedback_container_mobile {
     display: none;
+    margin-bottom: 10px;
 }
 
 .feedback_title {
@@ -871,7 +1031,7 @@ body {
     font-weight: 700;
     font-size: 56px;
     line-height: 80px;
-    color: rgba(104, 148, 243, 1);
+    color:#F25EC9;
     max-width: 420px;
     text-transform: uppercase;
 }
@@ -883,27 +1043,55 @@ body {
     margin-top: 60px;
 }
 
-@media (max-width: 870px) {
-
-    .feedback_container_desktop {
-        display: none;
-    }
-
-    .feedback_container_mobile {
-        margin-top: 32px;
-        display: inline;
-    }
-
+@media (max-width:1200px) {
     .feedback_title {
         text-align: center;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 870px) {
+    .feedback_container_desktop {
+        display: none;
+    }    
+    .feedback_container_mobile {
+        display: block;
+        margin-top: 32px;
+    }    
+    .feedback_screenshots_mobile {
+        margin-top: 30px;
+    }    
+    .feedback_title {
         font-size: 32px;
         line-height: 40px;
         text-transform: uppercase;
     }
 
-    .feedback_screenshots_mobile {
-        margin-top: 30px;
+    .feedback_card div {
+        margin: 0;
+    }
+
+    .trainers_container {
+        margin-top: 50px;
+    }
+
+    .trainers_title {
+        font-size: 32px;
+    }
+
+    .trainers_photo-desktop {
+        display: none;
+    }
+
+    .trainers_photo-mobile {
+        display: block;
+    }
+
+    .trainer_card {
+        padding: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
     }
 }
 
@@ -920,7 +1108,7 @@ body {
 }
 
 .footer_contacts_container {
-    background-color: rgba(93, 161, 248, 1);
+    background: linear-gradient(243.41deg, #D16BA5 -0.69%, #86A8E7 61.72%, #5FFBF1 100%);
     width: 50%;
     box-sizing: border-box;
     padding: 40px 100px;
@@ -1027,15 +1215,13 @@ body {
     }
 
     .footer_contacts_container {
-        width: 100% !important;
+        width: 100%;
         padding: 40px 10px;
         text-align: center;
+        display: flex;
         margin-left: 0;
     }
 
-    #footer_contacts_map {
-        width: 100% !important;
-    }
     .footer_contacts_address h2 {
         display: none;
     }
@@ -1054,7 +1240,7 @@ body {
 
     #footer_contacts_map {
         height: auto;
-        width: 100%;
+        width: 100% !important;
     }
 }
 
