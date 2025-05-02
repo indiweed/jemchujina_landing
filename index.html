@@ -69,7 +69,7 @@
                         <img src="images/hero_background_1.png" alt="">
                         <div class="overlay"></div>
                         <div class="uk-position-center-left">
-                            <div class="club_info">
+                            <div class="club_info" id="intro_section_first_slide">
                                 <h2 class="club_desc_up">С любовью <br> к гимнастике <br> и детям!</h2>
                                 <form action="https://wa.me/79273109454" target="_blank" class="trial_session_form_slider">
                                     <button class="trial_session_btn intro_button">
@@ -122,7 +122,6 @@
             </div>
         </div>
     </div>
-        
         <main class="main">
             <div class="about_us_title" id="school">
                 Почему выбирают нас?
@@ -156,7 +155,7 @@
                 </div>
                 <div class="video_container">
                     <video class="video" autoplay muted loop>
-                        <source src="images/videoo.mp4" type="video/mp4">
+                        <source src="images/Жемучина.mov" type="video/mp4">
                     </video>
                     <form action="https://wa.me/79273109454" target="_blank"  class="trial_session_form">
                         <button class="trial_session_btn btn_desktop" id="trial_session_video">
@@ -170,12 +169,30 @@
                     <h2 class="slider_menu_title">
                         Растим чемпионов
                     </h2>
-                    <!--<img class="carousel_mobile" src="images/carousel2.svg" alt="">-->
-                    <div class="uk uk-mobile uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true; autoplay: false">
+                    <div class="slider_menu_info_list">
+                        <ul class="slider_menu_info_ul">
+                            <li class="slider_menu_info_item">
+                                <h2 id="master_of_sports">5 мастеров спорта</h2>
+                                <!--<p>мастера спорта России</p>-->
+                            </li>
+                            <li class="slider_menu_info_item">
+                                <h2 id="candidates_for_master_of_sports">32 кандидата в мастера спорта</h2>
+                                <!--<p>кандидаты в мастера спорта</p>-->
+                            </li>
+                            <li class="slider_menu_info_item">
+                                <h2>Победители и призеры</h2>
+                                <p>соревнований регионального <br> и всероссийского уровня</p>
+                            </li>
+                            <li class="slider_menu_info_item">
+                                <h2>Участницы чемпионата, кубка и первенства России</h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="uk uk-mobile uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true">
                         <div class="uk-slider-items uk-flex">
                             <div class="uk-width-1-1">
                                 <div class="uk-panel">
-                                    <img src="images/champions_1.png" loading="eager" alt="">
+                                    <img src="images/champions_3.png" loading="eager" alt="">
                                 </div>
                             </div>
                             <div class="uk-width-1-1">
@@ -185,7 +202,7 @@
                             </div>
                             <div class="uk-width-1-1">
                                 <div class="uk-panel">
-                                    <img src="images/champions_3.png" loading="eager" alt="">
+                                    <img src="images/champions_1.png" loading="eager" alt="">
                                 </div>
                             </div>
                             <div class="uk-width-1-1">
@@ -208,40 +225,16 @@
                                     <img src="images/champions_7.png" loading="eager" alt="">
                                 </div>
                             </div>
-                            <div class="uk-width-1-1">
-                                <div class="uk-panel">
-                                    <img src="images/champions_8.png" loading="eager" alt="">
-                                </div>
-                            </div>
                         </div>
                         <a class="uk-position-center-left uk-position-small uk-hidden-hover"uk-slider-item="previous"><img src="images/prevbtn_mobile.svg" alt="Назад"></a>
                         <a class="uk-position-center-right uk-position-small uk-hidden-hover"uk-slider-item="next"><img src="images/arrowbtn_mobile.svg" alt="Вперед"></a>
                     </div>
-                    <div class="slider_menu_info_list">
-                        <ul class="slider_menu_info_ul">
-                            <li class="slider_menu_info_item">
-                                <h2 id="master_of_sports">5 мастеров спорта</h2>
-                                <!--<p>мастера спорта России</p>-->
-                            </li>
-                            <li class="slider_menu_info_item">
-                                <h2 id="candidates_for_master_of_sports">32 кандидата в мастера спорта</h2>
-                                <!--<p>кандидаты в мастера спорта</p>-->
-                            </li>
-                            <li class="slider_menu_info_item">
-                                <h2>Победители и призеры</h2>
-                                <p>соревнований регионального <br> и всероссийского уровня</p>
-                            </li>
-                            <li class="slider_menu_info_item">
-                                <h2>Участницы чемпионата, кубка и первенства России</h2>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-                <div class="uk uk-desktop uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true; autoplay: false">
-                    <div class="uk-slider-items uk-grid uk-flex-center">
+                <div class="uk uk-desktop uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true">
+                    <div class="uk-slider-items">
                         <div class="uk-width-1-2">
                             <div class="uk-panel">
-                                <img src="images/champions_1.png" loading="eager" alt="">
+                                <img src="images/champions_3.png" loading="eager" alt="">
                             </div>
                         </div>
                         <div class="uk-width-1-2">
@@ -251,7 +244,7 @@
                         </div>
                         <div class="uk-width-1-2">
                             <div class="uk-panel">
-                                <img src="images/champions_3.png" loading="eager" alt="">
+                                <img src="images/champions_1.png" loading="eager" alt="">
                             </div>
                         </div>
                         <div class="uk-width-1-2">
@@ -272,11 +265,6 @@
                         <div class="uk-width-1-2">
                             <div class="uk-panel">
                                 <img src="images/champions_7.png" loading="eager" alt="">
-                            </div>
-                        </div>
-                        <div class="uk-width-1-2">
-                            <div class="uk-panel">
-                                <img src="images/champions_8.png" loading="eager" alt="">
                             </div>
                         </div>
                     </div>
@@ -353,78 +341,80 @@
                 <p class="trainers_title">
                     Наши тренеры
                 </p>
-                <div class="trainers_photo-desktop uk-position-relative uk-visible-toggle uk-dark" uk-slider="center: true; autoplay: true; autoplay-interval: 2000">
-                    <div class="uk-slider-items uk-flex">
-                        <div class="uk-width-1-3">
+                <div class="trainers_photo-desktop uk-position-relative uk-visible-toggle uk-dark" uk-slider="center: true">
+                    <div class="uk-slider-items uk-child-width-1-3 uk-grid" uk-grid>
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_1.png" loading="eager" alt="">
                                 <h2>Низамова Ирина <br> Мусаевна</h2>
-                                <p class="trainer_bio">Главный тренер, мастер спорта <br> по художественной гимнастике.</p>
-                                <p class="trainer_exp">Тренерский стаж 15 лет</p>
+                                <p class="trainer_bio"> Старший тренер, тренер высшей категории, судья Всероссийской категории, тренер <br> сборной команды Республики Башкортостан</p>
+                                <p class="trainer_exp">Педагогический стаж работы 20 лет</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-3">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_2.png" loading="eager" alt="">
                                 <h2>Безворотняя Светлана <br> Мусаевна</h2>
-                                <p class="trainer_bio">Тренер начальной группы <br> подготовки. </p>
-                                <p class="trainer_exp">Тренерский стаж 10 лет</p>
+                                <p class="trainer_bio">Тренер начальной подготовки, <br> спортивный психолог </p>
+                                <p class="trainer_exp">Педагогический стаж работы 30 лет</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-3">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_3.png" loading="eager" alt="">
                                 <h2>Снисаренко Эвелина <br> Ивановна</h2>
-                                <p class="trainer_bio">Мастер спорта по художественной <br> гимнастике, КМС по спортивной <br> акробатике, победитель <br> международных соревнований</p>
+                                <p class="trainer_bio">Тренер-хореограф, тренер групп спортивной специализации. Мастер спорта России <br> по художественной гимнастике, член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований, участница Кубка России. КМС по спортивной акробатике, победитель Международных, Всероссийских и Региональных соревнований по спортивной акробатике</p>
+                                <p class="trainer_exp">Тренерский стаж работы 5 лет</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-3">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_4.png" loading="eager" alt="">
                                 <h2>Снисаренко Аделина <br> Ивановна</h2>
-                                <p class="trainer_bio">Мастер спорта по спортивной <br> акробатике, победитель и призер <br> международных и всероссийских <br> соревнований</p>
+                                <p class="trainer_bio">Тренер по акробатике и ОФП. <br> Мастер спорта России по спортивной акробатике. <br> Победитель и призёр Международных, Всероссийских и Региональных соревнований, <br> Первенства России, Чемпионата России.</p>
+                                <p class="trainer_exp">Тренерский стаж работы 5 лет</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-3">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_5.png" loading="eager" alt="">
                                 <h2>Безворотняя Элиза <br> Васильевна</h2>
-                                <p class="trainer_bio">Мастер спорта по художественной <br> гимнастике, призер всероссийских <br> соревнований, победитель <br> чемпионата Башкирии</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских <br> и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-3">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_6.png" loading="eager" alt="">
                                 <h2>Яхина Алина <br> Данисовна</h2>
-                                <p class="trainer_bio">Мастер спорта <br> по художественной гимнастике</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских <br> и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-3">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_7.png" loading="eager" alt="">
                                 <h2>Гадельшина Диана <br> Рамилевна</h2>
-                                <p class="trainer_bio">Мастер спорта <br> по художественной гимнастике</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских <br> и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-3">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_8.png" loading="eager" alt="">
                                 <h2>Шарафутдинова Дарина <br> Ильдаровна</h2>
-                                <p class="trainer_bio">КМС по художественной гимнастике, <br> призер всероссийских соревнований, <br> победитель чемпионата Башкирии</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> КМС по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр <br> Всероссийских и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России.</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-3">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_9.png" loading="eager" alt="">
                                 <h2>Низамова Виолетта <br> Альбертовна</h2>
-                                <p class="trainer_bio">КМС по художественной гимнастике, <br> призер всероссийских соревнований, <br> победитель чемпионата Башкирии</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> КМС по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр <br> Всероссийских и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России.</p>
                             </div>
                         </div>
                     </div>
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slider-item="previous"><img src="images/prevbtn_mobile.svg" alt="Назад"></a>
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slider-item="next"><img src="images/arrowbtn_mobile.svg" alt="Вперед"></a>
                 </div>
-                <div class="trainers_photo-mobile uk-position-relative uk-visible-toggle uk-dark" uk-slider="center: true; autoplay: true; autoplay-interval: 2000">
+                <div class="trainers_photo-mobile uk-position-relative uk-visible-toggle uk-dark" uk-slider="center: true; autoplay: false; autoplay-interval: 2000">
                     <div class="uk-slider-items uk-flex">
                         <div class="uk-width-1-1">
                             <div class="uk-panel trainer_card">
@@ -504,17 +494,17 @@
                     </p>
                     <div class="feedback_screenshots_desktop uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true; autoplay: false">
                         <div class="uk-slider-items uk-flex">
-                            <div class="uk-width-1-2 feedback_card">
+                            <div class="uk-width-1-3 feedback_card">
                                 <div class="uk-panel">
                                     <img src="images/feedback_1.png" loading="eager" alt="">
                                 </div>
                             </div>
-                            <div class="uk-width-1-2 feedback_card">
+                            <div class="uk-width-1-3 feedback_card">
                                 <div class="uk-panel">
                                     <img src="images/feedback_2.png" loading="eager" alt="">
                                 </div>
                             </div>
-                            <div class="uk-width-1-2 feedback_card">
+                            <div class="uk-width-1-3 feedback_card">
                                 <div class="uk-panel">
                                     <img src="images/feedback_3.png" loading="eager" alt="">
                                 </div>
@@ -555,22 +545,24 @@
         <footer class="footer" id="footer_contacts">
             <div class="footer_container">
                 <div class="footer_contacts_container">
-                    <div class="footer_logo_container"><img class="logo" src="images/logo_logo.svg" alt="Логотип"></div>
-                    <h1 class="footer_contacts_title">Контакты</h1>
-                    <div class="footer_phone_numbers">
-                        <a href="tel: +7 927 310 94 54" class="footer_number footer_number_up">+7 927 310-94-54</a>
-                        <a href="tel: +7 987 254 46 58" class="footer_number footer_number_down">+7 987 254-46-58</a>
+                    <div class="footer_contacts_wrapper">
+                        <div class="footer_logo_container"><img class="logo" src="images/logo_logo.svg" alt="Логотип"></div>
+                        <h1 class="footer_contacts_title">Контакты</h1>
+                        <div class="footer_phone_numbers">
+                            <a href="tel: +7 927 310 94 54" class="footer_number footer_number_up">+7 927 310-94-54</a>
+                            <a href="tel: +7 987 254 46 58" class="footer_number footer_number_down">+7 987 254-46-58</a>
+                        </div>
+                        <div class="footer_contacts_address">
+                            <h2>Приходите в гости:</h2>
+                            <p>г. Уфа, ул Менделеева, 136/5 к11</p>
+                        </div>
+                        <div class="footer_contacts_social">
+                            <a id="instagram" target="_blank" href="https://www.instagram.com/sk_zhemchuzhina_ufa?igsh=MTJ5bW44b3E5bGhhdA=="><img src="images/instagram.webp" alt="instagram"></a>
+                            <span id="inst_info">*</span>
+                            <a id="whatsapp" target="_blank" href="https://wa.me/79273109454"><img src="images/simple-icons_whatsapp.svg" alt="whatsapp"></a>
+                        </div>
+                        <p id="inst_info_text">*Запрещенная на территории Российской Федерации организация</p> 
                     </div>
-                    <div class="footer_contacts_address">
-                        <h2>Приходите в гости:</h2>
-                        <p>г. Уфа, ул Менделеева, 136/5 к11</p>
-                    </div>
-                    <div class="footer_contacts_social">
-                        <a id="instagram" target="_blank" href="https://www.instagram.com/sk_zhemchuzhina_ufa?igsh=MTJ5bW44b3E5bGhhdA=="><img src="images/instagram.webp" alt="instagram"></a>
-                        <span id="inst_info">*</span>
-                        <a id="whatsapp" target="_blank" href="https://wa.me/79273109454"><img src="images/simple-icons_whatsapp.svg" alt="whatsapp"></a>
-                    </div>
-                    <p id="inst_info_text">*Запрещенная на территории Российской Федерации организация</p> 
                 </div>
                 <div id="footer_contacts_map" style="width: 50% ; height: 100%;"></div>
             </div>
