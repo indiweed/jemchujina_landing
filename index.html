@@ -7,6 +7,7 @@
     <title>Спортивный клуб "Жемчужина"</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
     <link rel="icon" href="images/logo.svg" type="image/svg">
+    <script src="services/loading.js"></script>
     <script src="services/slider.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8822bfca-3640-4f11-9bda-78025dbd3ac2&lang=ru_RU" type="text/javascript">
     </script>
@@ -27,6 +28,12 @@
     <script src="services/burger_menu.js"></script>
 </head>
 <body>
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <img src="images/logo_logo.svg" alt="Логотип" class="loader-logo">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
     <div class="intro">
         <header class="header">
             <div class="header_container">
@@ -588,5 +595,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/99895288" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
+    <script src="services/after_loading.js"></script>
 </body>
 </html>
