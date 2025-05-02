@@ -39,6 +39,7 @@ ul, ul li {
 
 img {
 	vertical-align: top;
+    content-visibility: auto;
 }
 
 img, svg {
@@ -95,17 +96,20 @@ html {
 
 @font-face {
     font-family: 'Cormorant Garamond';
-    src: url(fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf);
+    src: url(fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf) format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Raleway';
-    src: url(fonts/Raleway/Raleway-VariableFont_wght.ttf);
+    src: url(fonts/Raleway/Raleway-VariableFont_wght.ttf) format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Manrope';
-    src: url(fonts/Manrope/Manrope-VariableFont_wght.ttf);
+    src: url(fonts/Manrope/Manrope-VariableFont_wght.ttf) format('woff2');
+    font-display: swap;
 }
 
 /* Анимация загрузки */
@@ -149,12 +153,25 @@ html {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% { transform: scale(1) }
+    50% { transform: scale(1.1) }
+    100% { transform: scale(1) }
 }
 
-/* /Анимация загрузки */
+body:not(.loaded) .intro,
+    body:not(.loaded) .main,
+    body:not(.loaded) .footer {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+body.loaded .intro,
+body.loaded .main,
+body.loaded .footer {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in;
+}/* /Анимация загрузки */
 
 body {
     margin: 0 auto;

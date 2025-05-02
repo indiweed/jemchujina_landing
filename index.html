@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Спортивный клуб "Жемчужина"</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
     <link rel="icon" href="images/logo.svg" type="image/svg">
-    <script src="services/loading.js"></script>
-    <script src="services/slider.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
+    <link rel="preload" href="images/hero_background_1.png" as="image">
+    <link rel="preload" href="fonts/Manrope/Manrope-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8822bfca-3640-4f11-9bda-78025dbd3ac2&lang=ru_RU" type="text/javascript">
     </script>
     <script>
@@ -25,12 +25,17 @@
         }
         ymaps.ready(init);
     </script>
-    <script src="services/burger_menu.js"></script>
+    <style>
+        .page-loader, .intro, .header {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
 </head>
 <body>
     <div class="page-loader" id="pageLoader">
         <div class="loader-content">
-            <img src="images/logo_logo.svg" alt="Логотип" class="loader-logo">
+            <img src="images/load_logo.png" alt="Логотип" class="loader-logo">
             <div class="loader-spinner"></div>
         </div>
     </div>
@@ -161,7 +166,7 @@
                     </form>
                 </div>
                 <div class="video_container">
-                    <video class="video" autoplay muted loop playsinline>
+                    <video class="video" autoplay muted loop playsinline preload="none">
                         <source src="images/preview_video.mp4" type="video/mp4">
                     </video>
                     <form action="https://wa.me/79273109454" target="_blank"  class="trial_session_form">
@@ -575,8 +580,11 @@
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js" defer></script>
+    <script src="services/loading.js"></script>
+    <script src="services/slider.js"></script>
+    <script src="services/burger_menu.js"></script>
     <script src="services/after_loading.js"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
