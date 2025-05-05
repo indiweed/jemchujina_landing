@@ -112,6 +112,11 @@ html {
     font-display: swap;
 }
 
+.page-loader, .intro, .header {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 /* Анимация загрузки */
 .page-loader {
     position: fixed;
@@ -248,6 +253,21 @@ body {
     text-decoration: none;
 }
 
+.burger_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+.burger_overlay.active {
+    display: block;
+}
+
 .burger_btn {
     right: 20px;
     display: none;
@@ -260,7 +280,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 640px;
+    height: 650px;
     padding: 20px;
     background-color: white;
     display: flex;
@@ -280,13 +300,17 @@ body {
     justify-content: space-between;
 }
 
+.burger_top img {
+    width: 80px;
+}
+
 .burger_nav_menu {
     text-align: center;
 }
 
 .burger_nav_menu ul {
     padding: 0;
-    margin-top: 50px;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -301,7 +325,7 @@ body {
 }
 
 .burger_phone {
-    margin-top: 30px;
+    margin-top: 70px;
     font-family: 'Raleway', sans-serif;
     font-size: 24px;
     font-weight: 500;
@@ -317,7 +341,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .burger_contacts_social a img {
@@ -466,7 +490,7 @@ body {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
     .club_info {
         margin-left: 10px;
     }
@@ -1127,10 +1151,9 @@ body {
     }
 
     .trainer_card {
+        max-width: 310px;
+        margin: 0 auto;
         padding: 0;
-        margin: 0;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .feedback_container_desktop {

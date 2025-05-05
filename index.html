@@ -25,12 +25,6 @@
         }
         ymaps.ready(init);
     </script>
-    <style>
-        .page-loader, .intro, .header {
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-    </style>
 </head>
 <body>
     <div class="page-loader" id="pageLoader">
@@ -41,6 +35,7 @@
     </div>
     <div class="intro">
         <header class="header">
+            <div class="burger_overlay"></div>
             <div class="header_container">
                 <img src="images/logo_logo.svg" alt="Логотип" class="logo">               
                 <div class="header_navbar_container">
@@ -53,25 +48,6 @@
                     <a class="header_phone" href="tel:+7 987 254 46 58">+7 987 254-46-58</a>
                 </div>
                 <button class="burger_btn"><img src="images/burger.svg" alt="Меню"></button>
-                <div class="burger_menu">
-                    <div class="burger_top">
-                        <img src="images/burger_logo.png" alt="Логотип">
-                        <button class="burger_close"><img src="images/burger_close.svg" alt="Закрыть"></button>
-                    </div>
-                    <div class="burger_nav_menu">
-                        <ul>
-                            <li><a href="#school">О школе</a></li>
-                            <li><a href="#competitions">Соревнования</a></li>
-                            <li><a href="#footer_contacts">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="burger_phone"><a href="tel:+7 927 310 94 54">+7 927 310-94-54</a></div>
-                    <div class="burger_contacts_social">
-                        <a target="_blank" href="https://www.instagram.com/sk_zhemchuzhina_ufa?igsh=MTJ5bW44b3E5bGhhdA=="><img src="images/inst_burger.png" alt="instagram"></a>
-                        <span id="inst_info">*</span>
-                        <a target="_blank" href="https://wa.me/79273109454"><img src="images/burger_whatsapp.svg" alt="whatsapp"></a>
-                    </div>
-                </div>
             </div>
         </header>
         <div class="intro-slider uk-visible-toggle uk-dark" uk-slider="center: true; autoplay: true; autoplay-interval: 2000">
@@ -134,6 +110,25 @@
             </div>
         </div>
     </div>
+    <div class="burger_menu">
+        <div class="burger_top">
+            <img src="images/burger_logo.png" alt="Логотип">
+            <button class="burger_close"><img src="images/burger_close.svg" alt="Закрыть"></button>
+        </div>
+        <div class="burger_nav_menu">
+            <ul>
+                <li><a href="#school">О школе</a></li>
+                <li><a href="#competitions">Соревнования</a></li>
+                <li><a href="#footer_contacts">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="burger_phone"><a href="tel:+7 927 310 94 54">+7 927 310-94-54</a></div>
+        <div class="burger_contacts_social">
+            <a target="_blank" href="https://www.instagram.com/sk_zhemchuzhina_ufa?igsh=MTJ5bW44b3E5bGhhdA=="><img src="images/inst_burger.png" alt="instagram"></a>
+            <span id="inst_info">*</span>
+            <a target="_blank" href="https://wa.me/79273109454"><img src="images/burger_whatsapp.svg" alt="whatsapp"></a>
+        </div>
+    </div>
         <main class="main">
             <div class="about_us_title" id="school">
                 Почему выбирают нас?
@@ -181,7 +176,7 @@
                     <h2 class="slider_menu_title">
                         Растим чемпионов
                     </h2>
-                    <div class="uk uk-mobile uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true">
+                    <div class="uk uk-mobile uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true; autoplay: true; autoplay-interval: 2000">
                         <div class="uk-slider-items uk-flex">
                             <div class="uk-width-1-1">
                                 <div class="uk-panel">
@@ -242,7 +237,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="uk uk-desktop uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true">
+                <div class="uk uk-desktop uk-position-relative uk-visible-toggle uk-light custom-slider" uk-slider="center: true; autoplay: true; autoplay-interval: 2000">
                     <div class="uk-slider-items">
                         <div class="uk-width-1-2">
                             <div class="uk-panel">
@@ -359,7 +354,7 @@
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_1.png" loading="eager" alt="">
                                 <h2>Низамова Ирина <br> Мусаевна</h2>
-                                <p class="trainer_bio"> Старший тренер, тренер высшей категории, судья Всероссийской категории, тренер <br> сборной команды Республики Башкортостан</p>
+                                <p class="trainer_bio"> Старший тренер, тренер высшей категории, судья Всероссийской категории, тренер сборной команды Республики Башкортостан</p>
                                 <p class="trainer_exp">Педагогический стаж работы 20 лет</p>
                             </div>
                         </div>
@@ -375,7 +370,7 @@
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_3.png" loading="eager" alt="">
                                 <h2>Снисаренко Эвелина <br> Ивановна</h2>
-                                <p class="trainer_bio">Тренер-хореограф, тренер групп спортивной специализации. Мастер спорта России <br> по художественной гимнастике, член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований, участница Кубка России. КМС по спортивной акробатике, победитель Международных, Всероссийских и Региональных соревнований по спортивной акробатике</p>
+                                <p class="trainer_bio">Тренер-хореограф, тренер групп спортивной специализации. <br> Мастер спорта России <br> по художественной гимнастике, <br> член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований, участница Кубка России. КМС по спортивной акробатике, победитель Международных, Всероссийских <br> и Региональных соревнований <br> по спортивной акробатике</p>
                                 <p class="trainer_exp">Тренерский стаж работы 5 лет</p>
                             </div>
                         </div>
@@ -383,7 +378,7 @@
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_4.png" loading="eager" alt="">
                                 <h2>Снисаренко Аделина <br> Ивановна</h2>
-                                <p class="trainer_bio">Тренер по акробатике и ОФП. <br> Мастер спорта России по спортивной акробатике. <br> Победитель и призёр Международных, Всероссийских и Региональных соревнований, <br> Первенства России, Чемпионата России.</p>
+                                <p class="trainer_bio">Тренер по акробатике и ОФП. <br> Мастер спорта России по спортивной акробатике.  Победитель и призёр Международных, Всероссийских <br> и Региональных соревнований, Первенства России, <br> Чемпионата России</p>
                                 <p class="trainer_exp">Тренерский стаж работы 5 лет</p>
                             </div>
                         </div>
@@ -391,106 +386,108 @@
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_5.png" loading="eager" alt="">
                                 <h2>Безворотняя Элиза <br> Васильевна</h2>
-                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских <br> и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России 2022-2023 г.</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России <br> по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
                         <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_6.png" loading="eager" alt="">
                                 <h2>Яхина Алина <br> Данисовна</h2>
-                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских <br> и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России 2022-2023 г.</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России <br> по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
                         <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_7.png" loading="eager" alt="">
                                 <h2>Гадельшина Диана <br> Рамилевна</h2>
-                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских <br> и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России 2022-2023 г.</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России <br> по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
                         <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_8.png" loading="eager" alt="">
-                                <h2>Шарафутдинова Дарина <br> Ильдаровна</h2>
-                                <p class="trainer_bio">Тренер-стажёр. <br> КМС по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр <br> Всероссийских и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России.</p>
+                                <h2>Шарафутдинова Дарина Ильдаровна</h2>
+                                <p class="trainer_bio">Тренер-стажёр. <br> КМС по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России</p>
                             </div>
                         </div>
                         <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_9.png" loading="eager" alt="">
                                 <h2>Низамова Виолетта <br> Альбертовна</h2>
-                                <p class="trainer_bio">Тренер-стажёр. <br> КМС по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр <br> Всероссийских и Региональных соревнований <br> по художественной гимнастике. <br> Участница спартакиады учащихся, <br> Первенства России, Кубка России.</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> КМС по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России</p>
                             </div>
                         </div>
                     </div>
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slider-item="previous"><img src="images/prevbtn_mobile.svg" alt="Назад"></a>
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slider-item="next"><img src="images/arrowbtn_mobile.svg" alt="Вперед"></a>
                 </div>
-                <div class="trainers_photo-mobile uk-position-relative uk-visible-toggle uk-dark" uk-slider="center: true; autoplay: false; autoplay-interval: 2000">
-                    <div class="uk-slider-items uk-flex">
-                        <div class="uk-width-1-1">
+                <div class="trainers_photo-mobile uk-position-relative uk-visible-toggle uk-dark" uk-slider="center: true">
+                    <div class="uk-slider-items uk-child-width-1-1 uk-flex">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_1.png" loading="eager" alt="">
                                 <h2>Низамова Ирина <br> Мусаевна</h2>
-                                <p class="trainer_bio">Главный тренер, мастер спорта <br> по художественной гимнастике.</p>
-                                <p class="trainer_exp">Тренерский стаж 15 лет</p>
+                                <p class="trainer_bio"> Старший тренер, тренер высшей категории, судья Всероссийской категории, тренер сборной команды Республики Башкортостан</p>
+                                <p class="trainer_exp">Педагогический стаж работы 20 лет</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-1">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_2.png" loading="eager" alt="">
                                 <h2>Безворотняя Светлана <br> Мусаевна</h2>
-                                <p class="trainer_bio">Тренер начальной группы <br> подготовки. </p>
-                                <p class="trainer_exp">Тренерский стаж 10 лет</p>
+                                <p class="trainer_bio">Тренер начальной подготовки, <br> спортивный психолог </p>
+                                <p class="trainer_exp">Педагогический стаж работы 30 лет</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-1">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_3.png" loading="eager" alt="">
                                 <h2>Снисаренко Эвелина <br> Ивановна</h2>
-                                <p class="trainer_bio">Мастер спорта по художественной <br> гимнастике, КМС по спортивной <br> акробатике, победитель <br> международных соревнований</p>
+                                <p class="trainer_bio">Тренер-хореограф, тренер групп спортивной специализации. <br> Мастер спорта России <br> по художественной гимнастике, <br> член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований, участница Кубка России. КМС по спортивной акробатике, победитель Международных, Всероссийских <br> и Региональных соревнований <br> по спортивной акробатике</p>
+                                <p class="trainer_exp">Тренерский стаж работы 5 лет</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-1">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_4.png" loading="eager" alt="">
                                 <h2>Снисаренко Аделина <br> Ивановна</h2>
-                                <p class="trainer_bio">Мастер спорта по спортивной <br> акробатике, победитель и призер <br> международных и всероссийских <br> соревнований</p>
+                                <p class="trainer_bio">Тренер по акробатике и ОФП. <br> Мастер спорта России по спортивной акробатике.  Победитель и призёр Международных, Всероссийских <br> и Региональных соревнований, Первенства России, <br> Чемпионата России</p>
+                                <p class="trainer_exp">Тренерский стаж работы 5 лет</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-1">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_5.png" loading="eager" alt="">
                                 <h2>Безворотняя Элиза <br> Васильевна</h2>
-                                <p class="trainer_bio">Мастер спорта по художественной <br> гимнастике, призер всероссийских <br> соревнований, победитель <br> чемпионата Башкирии</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России <br> по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-1">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_6.png" loading="eager" alt="">
                                 <h2>Яхина Алина <br> Данисовна</h2>
-                                <p class="trainer_bio">Мастер спорта <br> по художественной гимнастике</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России <br> по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-1">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_7.png" loading="eager" alt="">
                                 <h2>Гадельшина Диана <br> Рамилевна</h2>
-                                <p class="trainer_bio">Мастер спорта <br> по художественной гимнастике</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> Мастер спорта России <br> по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России 2022-2023 г.</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-1">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_8.png" loading="eager" alt="">
-                                <h2>Шарафутдинова Дарина <br> Ильдаровна</h2>
-                                <p class="trainer_bio">КМС по художественной гимнастике, <br> призер всероссийских соревнований, <br> победитель чемпионата Башкирии</p>
+                                <h2>Шарафутдинова Дарина Ильдаровна</h2>
+                                <p class="trainer_bio">Тренер-стажёр. <br> КМС по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России</p>
                             </div>
                         </div>
-                        <div class="uk-width-1-1">
+                        <div>
                             <div class="uk-panel trainer_card">
                                 <img src="images/trainer_9.png" loading="eager" alt="">
                                 <h2>Низамова Виолетта <br> Альбертовна</h2>
-                                <p class="trainer_bio">КМС по художественной гимнастике, <br> призер всероссийских соревнований, <br> победитель чемпионата Башкирии</p>
+                                <p class="trainer_bio">Тренер-стажёр. <br> КМС по художественной гимнастике. <br> Член сборной Республики Башкортостан, победитель и призёр Всероссийских и Региональных соревнований по художественной гимнастике. Участница спартакиады учащихся, Первенства России, <br> Кубка России</p>
                             </div>
                         </div>
                     </div>
